@@ -10,5 +10,6 @@ public class TestLionGetKittens {
     public void getKittens() throws Exception {
         var l = new Lion("Самка");
         l.getKittens(1);
+        System.out.println(l.getKittens(1));
     }
 }

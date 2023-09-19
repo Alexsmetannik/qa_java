@@ -6,10 +6,12 @@ import static org.junit.Assert.*;
 
 public class TestFelineGetKittens {
 
+    protected Feline feline = new Feline();
+
     @Test
     public void getKittens() {
-        var f = new Feline();
-        int kittensCount = f.getKittens(0);
-        assertEquals(0, kittensCount);
+        int kittensCount = feline.getKittens(1);
+        assertEquals(1, kittensCount);
+        System.out.println(feline.getKittens(1));
     }
 }

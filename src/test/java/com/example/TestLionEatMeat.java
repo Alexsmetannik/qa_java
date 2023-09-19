@@ -10,5 +10,6 @@ public class TestLionEatMeat {
     public void eatMeat() throws Exception  {
         var l = new Lion("Самка");
         l.eatMeat();
+        System.out.println(l.eatMeat());
     }
 }

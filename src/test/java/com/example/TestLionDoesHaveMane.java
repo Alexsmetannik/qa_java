@@ -10,5 +10,6 @@ public class TestLionDoesHaveMane {
     public void doesHaveMane() throws Exception{
         var l = new Lion("Самка");
         l.doesHaveMane();
+        System.out.println(l.doesHaveMane());
     }
 }
