@@ -21,6 +21,6 @@ public class CatGetSoundTest {
         Cat cat = new Cat(feline);
         var expectedGetSound = "Мяу";
         var result = cat.getSound();
-        assertEquals(expectedGetSound, result);
+        assertEquals("Sound by cats is not correct", expectedGetSound, result);
     }
 }

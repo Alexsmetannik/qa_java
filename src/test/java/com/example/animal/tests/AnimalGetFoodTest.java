@@ -31,6 +31,6 @@ public class AnimalGetFoodTest {
         @Test
         public void getFood() throws Exception {
             Animal animal = new Animal();
-            assertEquals(food,animal.getFood(kindAnimal).toString());
+            assertEquals("Food for animals is not correct", food, animal.getFood(kindAnimal).toString());
         }
 }

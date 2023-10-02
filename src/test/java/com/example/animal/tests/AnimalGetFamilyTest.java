@@ -12,6 +12,6 @@ public class AnimalGetFamilyTest {
         Animal animal = new Animal();
         var expectedTextGetFamily = "Существует несколько семейств: заячьи, беличьи, мышиные, кошачьи, псовые, медвежьи, куньи";
         var result = animal.getFamily();
-        assertEquals(expectedTextGetFamily, result);
+        assertEquals("Family of animals is not correct",expectedTextGetFamily, result);
     }
 }

@@ -24,6 +24,6 @@ public class CatGetFoodTest {
         List<String> listPredator = List.of("Животные, Птицы, Рыба");
         Mockito.when(feline.eatMeat()).thenReturn(listPredator);
         List<String> result = cat.getFood();
-        assertEquals(listPredator, result);
+        assertEquals("Food for cats is not correct", listPredator, result);
     }
 }
