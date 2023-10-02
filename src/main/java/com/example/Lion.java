@@ -2,7 +2,7 @@ package com.example;
 
 import java.util.List;
 
-public class Lion extends Animal implements Predator{
+public class Lion {
 
     boolean hasMane;
 
@@ -16,15 +16,10 @@ public class Lion extends Animal implements Predator{
         }
     }
 
+    Feline feline = new Feline();
 
-    @Override
-    public List<String> eatMeat() throws Exception {
-        return null;
-    }
-
-    @Override
-    public int getKittens(int kittensCount) {
-        return getKittens(1);
+    public int getKittens() {
+        return feline.getKittens();
     }
 
     public boolean doesHaveMane() {
@@ -32,6 +27,6 @@ public class Lion extends Animal implements Predator{
     }
 
     public List<String> getFood() throws Exception {
-        return getFood("Хищник");
+        return feline.getFood("Хищник");
     }
 }
