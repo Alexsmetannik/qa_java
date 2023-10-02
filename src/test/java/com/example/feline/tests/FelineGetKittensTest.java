@@ -12,6 +12,6 @@ public class FelineGetKittensTest {
         Feline feline = new Feline();
         var expectedGetKittens = 1;
         var result = feline.getKittens();
-        assertEquals("Count of felines is not correct",expectedGetKittens, result);
+        assertEquals("Count of felines is not correct", expectedGetKittens, result);
     }
 }
