@@ -1,6 +1,5 @@
 package com.example.feline.tests;
 
-import com.example.Animal;
 import com.example.Feline;
 import org.junit.Test;
 

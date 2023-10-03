@@ -4,16 +4,19 @@ import com.example.Animal;
 import org.junit.Assert;
 import org.junit.Test;
 
-public class AnimalGetFoodTestException {
+import static org.junit.Assert.*;
+
+public class AnimalGetFoodExceptionTest {
     @Test
-    public void animalUnknownGetFoodTest() {
+    public void getFoodException() {
 
         Exception exception = Assert.assertThrows(Exception.class, () -> {
             Animal animal = new Animal();
-            animal.getFood("неизвестный");
+            animal.getFood("null");
         });
-        assertEquals("Неизвестный вид животного, используйте значение Травоядное или Хищник", exception.getMessage());
 
+        var expectedTextGetFoodException = "Неизвестный вид животного, используйте значение Травоядное или Хищник";
+
+        assertEquals("Unknown kind of animal", expectedTextGetFoodException, exception.getMessage());
     }
-}
 }
