@@ -7,15 +7,16 @@ import org.junit.runners.Parameterized;
 
 import java.util.List;
 
+import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.*;
 
 @RunWith(Parameterized.class)
 public class AnimalGetFoodTest {
 
         private final String kindAnimal;
-        private final String food;
+        private final List<String> food;
 
-        public AnimalGetFoodTest(String kindAnimal, String food) {
+        public AnimalGetFoodTest(String kindAnimal, List<String> food) {
                 this.kindAnimal = kindAnimal;
                 this.food = food;
             }
@@ -23,14 +24,14 @@ public class AnimalGetFoodTest {
         @Parameterized.Parameters
         public static Object[][] getAnimalParameters() {
             return new Object[][]{
-                    {"Травоядное", List.of("Трава", "Различные растения").toString()},
-                    {"Хищник",List.of("Животные", "Птицы", "Рыба").toString()},
+                    {"Травоядное", List.of("Трава", "Различные растения")},
+                    {"Хищник", List.of("Животные", "Птицы", "Рыба")},
             };
         }
 
         @Test
         public void getFood() throws Exception {
             Animal animal = new Animal();
-            assertEquals("Food for animals is not correct", food, animal.getFood(kindAnimal).toString());
+            assertEquals("Food for animals is not correct", food, animal.getFood(kindAnimal));
         }
 }
