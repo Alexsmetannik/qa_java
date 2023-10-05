@@ -13,7 +13,7 @@ import java.util.List;
 import static org.junit.Assert.*;
 
 @RunWith(MockitoJUnitRunner.class)
-public class CatGetFoodTest {
+public class CatMockTests {
 
     @Mock
     Feline feline;
@@ -25,5 +25,13 @@ public class CatGetFoodTest {
         Mockito.when(feline.eatMeat()).thenReturn(listPredator);
         List<String> result = cat.getFood();
         assertEquals("Food for cats is not correct", listPredator, result);
+    }
+
+    @Test
+    public void getSound() {
+        Cat cat = new Cat(feline);
+        var expectedGetSound = "Мяу";
+        var result = cat.getSound();
+        assertEquals("Sound by cats is not correct", expectedGetSound, result);
     }
 }

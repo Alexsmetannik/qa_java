@@ -7,16 +7,15 @@ import org.junit.runners.Parameterized;
 
 import java.util.List;
 
-import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.*;
 
 @RunWith(Parameterized.class)
-public class AnimalGetFoodTest {
+public class AnimalParameterizedTest {
 
         private final String kindAnimal;
         private final List<String> food;
 
-        public AnimalGetFoodTest(String kindAnimal, List<String> food) {
+        public AnimalParameterizedTest(String kindAnimal, List<String> food) {
                 this.kindAnimal = kindAnimal;
                 this.food = food;
             }

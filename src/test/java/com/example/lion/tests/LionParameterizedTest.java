@@ -8,12 +8,12 @@ import org.junit.runners.Parameterized;
 import static org.junit.Assert.*;
 
 @RunWith(Parameterized.class)
-public class LionDoesHaveManeTest {
+public class LionParameterizedTest {
 
     private final String sex;
     private final Boolean result;
 
-    public LionDoesHaveManeTest(String sex, Boolean result) {
+    public LionParameterizedTest(String sex, Boolean result) {
         this.sex = sex;
         this.result = result;
     }
